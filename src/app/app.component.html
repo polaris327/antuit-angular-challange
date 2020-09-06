@@ -1,27 +1,23 @@
 <app-header></app-header>
 
 <div class="content" role="main">
-  <div class="btn-group" dropdown placement="bottom right">
+  <div class="c-dropdown btn-group" dropdown placement="bottom right">
     <a id="button-alignment" dropdownToggle
-            class="dropdown-toggle" aria-controls="dropdown-alignment">
-      This dropdown's menu is right-aligned <span class="caret"></span>
+      class="dropdown-toggle" aria-controls="dropdown-alignment">
+      {{ selectedDD.name }} <span class="caret"></span>
     </a>
     <ul id="dropdown-alignment" *dropdownMenu class="dropdown-menu dropdown-menu-right"
-        role="menu" aria-labelledby="button-alignment">
-      <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
-      <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
-      <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
+      role="menu" aria-labelledby="button-alignment">
+      <li *ngFor="let dd of dropdowns" role="menuitem"><a class="dropdown-item" (click)="selectDD(dd)">{{ dd.name }}</a></li>
     </ul>
   </div>
-  <tabset #staticTabs class="w-100">
+  <tabset #tabset>
     <app-toolbar></app-toolbar>
-    <tab heading="Tab1">Tab 1 Selected</tab>
-    <tab heading="Tab2">Tab 2 Selected</tab>
-    <tab heading="Tab3">
-      Tab 3 Selected
-      <button type="button" class="btn btn-primary btn-sm" (click)="selectTab(0)">Route to Tab1</button>
+    <tab *ngFor="let tabz of tabs; let i = index;"
+      [heading]="tabz.title">
+      <div>{{tabz?.content}}</div>
+      <app-echart *ngIf="i === 1"></app-echart>
+      <button *ngIf="i === 2" type="button" class="btn btn-primary btn-sm" (click)="selectTab(0)">Route to {{ tabs[0].title }}</button>
     </tab>
   </tabset>
 </div>
-
-<router-outlet></router-outlet>

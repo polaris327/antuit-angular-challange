@@ -1,0 +1,98 @@
+$space-xxs: 3px;
+$space-xs: 5px;
+$space-s: 10px;
+$space-m: 15px;
+$space-l: 20px;
+$space-xl: 35px;
+$space-xxl: 55px;
+
+
+$font-xxs: 10px;
+$font-xs: 12px;
+$font-s: 16px;
+$font-m: 18px;
+$font-l: 22px;
+$font-xl: 26px;
+$font-xxl: 43px;
+
+
+$gray-black: #000000;
+$gray-darkest: #2f2f2f;
+$gray-dark-back: #343434;
+$gray-darker: #414141;
+$gray-darker2: #5B5B5B;
+$gray-dark: #737373;
+$gray-normal: #ACACAC;
+$gray-light: #C7C7C7;
+$gray-lighter: #E0E0E0;
+$gray-lightest: #F5F5F5;
+$gray-white: #FFFFFF;
+
+
+$green-default: #21F3B0;
+$green-dark: #31a17e;
+$green-back: #305046;
+$green-pale: #a7bab4;
+$green-dark-text: #006445;
+
+$blue-default: #1483e2;
+
+$red-default: #ed7272;
+
+$orange-default: #FFCC6A;
+
+$font-family-nunito: ("Nunito", Helvetica, sans-serif);
+
+$font: (
+		family-nunito: ("Nunito", Helvetica, sans-serif),
+		xs: 12px,
+		s: 16px,
+		m: 18px,
+		l: 26px,
+		xl: 43px
+	//family-num: 'Arial, sans-serif'
+);
+
+
+$gray: (
+		black: #000000,
+		darkest: #282828,
+		darker: #414141,
+		dark: #737373,
+		normal: #ACACAC,
+		light: #C7C7C7,
+		lighter: #E0E0E0,
+		lightest: #F5F5F5,
+		white: #FFFFFF,
+);
+
+$widget: (
+		background: rgba(white, 0.03),
+		border-radius: 5px,
+);
+
+$green: (
+		default: #21F3B0,
+		back: #305046
+);
+
+$red: (
+		default: #ed7272,
+);
+
+
+$space: (
+		xs: 5px,
+		s: 10px,
+		m: 15px,
+		l: 30px,
+		xl: 60px
+);
+
+$screen: (
+		laptop: 1439px,
+);
+
+$first-screen-element-min-height: 600px;
+$page-top-height: 100px;
+$top-header-height: $page-top-height;

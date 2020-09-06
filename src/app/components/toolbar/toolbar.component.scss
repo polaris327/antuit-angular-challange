@@ -1,0 +1,57 @@
+@import "~src/scss/variables";
+
+.c-toolbar {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid $gray-lightest;
+
+  i {
+    cursor: pointer;
+  }
+}
+
+.c-toolbar--nav {
+  padding: 12px 20px;
+  border-right: 1px solid $gray-lightest;
+
+  i {
+    color: $gray-normal;
+  }
+
+  span {
+    padding: 0 15px;
+  }
+}
+
+.c-toolbar--content {
+  flex: 1;
+  padding: 0 20px;
+
+  h4 {
+    margin: 0;
+  }
+
+  span {
+    display: inline-flex;
+    align-items: center;
+    font-size: 12px;
+    font-style: italic;
+
+    .c-circle {
+      margin: 0 10px;
+    }
+  }
+}
+
+.c-toolbar--menu {
+  display: flex;
+
+  app-toolbar-menu {
+    border-right: 1px solid $gray-lightest;
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+}

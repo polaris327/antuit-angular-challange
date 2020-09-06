@@ -1,0 +1,49 @@
+:host {
+	font-family: map_get($font, family-nunito);
+  font-size: 14px;
+  color: #333;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	font-family: map_get($font, family-nunito);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 8px 0;
+	font-weight: 700;
+}
+
+p {
+  margin: 0;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  margin: 52px auto 32px;
+  flex-direction: column;
+  align-items: center;
+}
+
+a,
+a:visited,
+a:hover {
+  color: #1976d2;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #125699;
+}

@@ -1,3 +1,17 @@
-<div>
-  
+<div class="c-toolbar">
+  <div class="c-toolbar--nav">
+    <i class="fa fa-arrow-left" aria-hidden="true" (click)="prev()"></i>
+    <span>{{ selectedItemIndex + 1 }} / {{ toolbarItems.length }}</span>
+    <i class="fa fa-arrow-right" aria-hidden="true" (click)="next()"></i>
+  </div>
+  <div class="c-toolbar--content">
+    <h4>{{ toolbarItems[selectedItemIndex].title }}</h4>
+    <span *ngFor="let keyFigure of toolbarItems[selectedItemIndex].keyFigures; let i = index;">
+      {{ keyFigure }}
+      <span *ngIf="i < toolbarItems[selectedItemIndex].keyFigures.length-1" class="c-circle">&#9675;</span>
+    </span>
+  </div>
+  <div class="c-toolbar--menu">
+    <app-toolbar-menu *ngFor="let toolbarMenuItem of toolbarMenuItems" [toolbarMenuItem]="toolbarMenuItem"></app-toolbar-menu>
+  </div>
 </div>

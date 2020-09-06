@@ -1,0 +1,11 @@
+<div class="toolbar-menu">
+  <div>{{ toolbarMenuItem.title }}</div>
+  <div>
+    <i
+      *ngFor="let icon of toolbarMenuItem.icons"
+      [class]="icon.name" aria-hidden="true"
+      [ngClass]="{'selected': icon.status === 2, 'selected_on': icon.status === 3, 'inactive': icon.status === 4}"
+      (click)="statusChanged(icon)">
+    </i>
+  </div>
+</div>

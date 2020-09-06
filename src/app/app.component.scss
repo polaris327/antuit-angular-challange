@@ -1,0 +1,41 @@
+@import "~src/scss/variables";
+
+.c-dropdown {
+  font-size: 12px;
+  position: absolute;
+  top: 25px;
+  right: 30px;
+
+  .dropdown-menu {
+    font-size: 12px;
+  }
+}
+
+::ng-deep {
+  .tab-container {
+    width: 100%;
+
+    .nav-tabs {
+      padding: 14px;
+      border-bottom: 1px solid $gray-lightest;
+
+      .nav-item {
+        .nav-link {
+          border-color: #fff;
+          padding: .5rem 0;
+          margin: 0 1rem;
+          color: #000;
+        }
+
+        &.active .nav-link {
+          border-bottom: 2px solid $blue-default;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .tab-content>.tab-pane {
+      padding: 30px;
+    }
+  }
+}
